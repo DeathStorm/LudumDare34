@@ -3,7 +3,9 @@ using System.Collections;
 
 public class Tile : MonoBehaviour
 {
-    public Sprite tmpImage;
+    public Buildings buildings;
+
+
 
     private SpriteRenderer spriteRenderer;
     private Sprite standardSprite;
@@ -13,6 +15,8 @@ public class Tile : MonoBehaviour
     {
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         standardSprite = spriteRenderer.sprite;
+
+        buildings = GameObject.Find("Game_Properties").GetComponent<Buildings>();
     }
 
     // Update is called once per frame
@@ -23,7 +27,7 @@ public class Tile : MonoBehaviour
 
     void OnMouseEnter()
     {
-        spriteRenderer.sprite = tmpImage;
+        spriteRenderer.sprite = buildings.choosenBuildingSprite;
     }
 
     void OnMouseExit()
