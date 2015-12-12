@@ -48,7 +48,7 @@ public class Buildings : MonoBehaviour
 
         CreateBuildings();
 
-        guiController.UpdateGUIRessources();
+        //guiController.UpdateGUIRessources();
     }
 
     // Update is called once per frame
