@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+
+
+
     public int humans = 4;
 
     public int food = 10;
