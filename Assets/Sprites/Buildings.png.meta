@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e254026580b13cd4e934cb718e467caf
-timeCreated: 1449930010
+timeCreated: 1449936275
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,6 +8,9 @@ TextureImporter:
     21300002: Buildings_Well
     21300004: Buildings_House
     21300006: Buildings_Mine
+    21300008: Buildings_Lumberjack
+    21300010: Buildings_Stone
+    21300012: Buildings_Storehouse
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -88,6 +91,36 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buildings_Lumberjack
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buildings_Stone
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buildings_Storehouse
+      rect:
+        serializedVersion: 2
+        x: 192
         y: 0
         width: 32
         height: 32
