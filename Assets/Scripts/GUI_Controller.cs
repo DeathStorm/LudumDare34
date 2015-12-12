@@ -15,7 +15,7 @@ public class GUI_Controller : MonoBehaviour {
     public Text textOre;
     
 
-
+    private bool isInitialLoaded = false;
 
 	// Use this for initialization
 	void Start () 
@@ -28,6 +28,7 @@ public class GUI_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
+        if (!isInitialLoaded) UpdateGUIRessources();
 
         if (Input.GetMouseButton(1))
         {
