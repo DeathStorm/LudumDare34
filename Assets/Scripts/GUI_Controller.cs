@@ -38,7 +38,7 @@ public class GUI_Controller : MonoBehaviour {
 
     public void UpdateGUIRessources()
     {
-        textFood.text = player.food.ToString();
+        textFood.text = player.food.ToString(); 
         textWater.text = player.water.ToString();
         textHuman.text = player.humans.ToString();
         textOre.text = player.ore.ToString();
