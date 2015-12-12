@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using BUILDING = Buildings.BUILDING;
+
 public class Tile : MonoBehaviour
 {
-    public Buildings buildings;
 
-
+    private GameObject gameProperties;
+    private Buildings buildings;
+    private Player player;
 
     private SpriteRenderer spriteRenderer;
     private Sprite standardSprite;
+
+    public bool isOccupied = false;
+
 
     // Use this for initialization
     void Start()
@@ -16,7 +22,10 @@ public class Tile : MonoBehaviour
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         standardSprite = spriteRenderer.sprite;
 
-        buildings = GameObject.Find("Game_Properties").GetComponent<Buildings>();
+        gameProperties = GameObject.Find("Game_Properties");
+        buildings = gameProperties.GetComponent<Buildings>();
+        player = gameProperties.GetComponent<Player>();
+
     }
 
     // Update is called once per frame
@@ -27,18 +36,44 @@ public class Tile : MonoBehaviour
 
     void OnMouseEnter()
     {
-        spriteRenderer.sprite = buildings.choosenBuildingSprite;
+        if (!isOccupied) spriteRenderer.sprite = buildings.choosenBuildingSprite;
     }
 
     void OnMouseExit()
     {
-        spriteRenderer.sprite = standardSprite;
+        if (!isOccupied) spriteRenderer.sprite = standardSprite;
     }
 
 
     void OnMouseDown()
     {
-        Debug.Log("Fick dich geh weg.....");
+        if (!isOccupied && buildings.choosenBuildingToBuild != Buildings.BUILDINGS.NONE)
+        {
+
+            BUILDING building = buildings.listOfAllBuildings[buildings.choosenBuildingToBuild];
+
+            if (
+                player.wood >= building.costWood &&
+                player.food >= building.costWood &&
+                player.water >= building.costWood &&
+                player.ore >= building.costWood &&
+                player.stone >= building.costWood
+                )
+            {
+                player.wood -= building.costWood;
+                player.food -= building.costWood;
+                player.water -= building.costWood;
+                player.ore -= building.costWood;
+                player.stone -= building.costWood;
+
+                buildings.buildingList.Add(gameObject);
+                isOccupied = true;
+                standardSprite = spriteRenderer.sprite;
+            }
+        }
+        else
+        { Debug.Log("Fick dich geh weg.....\nHier ist besetzt."); }
+
     }
 
 }
