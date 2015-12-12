@@ -10,8 +10,8 @@ public class Tile : MonoBehaviour
     private Buildings buildings;
     private Player player;
 
-    private SpriteRenderer spriteRenderer;
-    private Sprite standardSprite;
+    public SpriteRenderer spriteRenderer;
+    public Sprite standardSprite;
 
     public bool isOccupied = false;
 
@@ -50,26 +50,27 @@ public class Tile : MonoBehaviour
         if (!isOccupied && buildings.choosenBuildingToBuild != Buildings.BUILDINGS.NONE)
         {
 
-            BUILDING building = buildings.listOfAllBuildings[buildings.choosenBuildingToBuild];
+            buildings.BuildBuilding(gameObject);
+            //BUILDING building = buildings.listOfAllBuildings[buildings.choosenBuildingToBuild];
 
-            if (
-                player.wood >= building.costWood &&
-                player.food >= building.costWood &&
-                player.water >= building.costWood &&
-                player.ore >= building.costWood &&
-                player.stone >= building.costWood
-                )
-            {
-                player.wood -= building.costWood;
-                player.food -= building.costWood;
-                player.water -= building.costWood;
-                player.ore -= building.costWood;
-                player.stone -= building.costWood;
+            //if (
+            //    player.wood >= building.costWood &&
+            //    player.food >= building.costWood &&
+            //    player.water >= building.costWood &&
+            //    player.ore >= building.costWood &&
+            //    player.stone >= building.costWood
+            //    )
+            //{
+            //    player.wood -= building.costWood;
+            //    player.food -= building.costWood;
+            //    player.water -= building.costWood;
+            //    player.ore -= building.costWood;
+            //    player.stone -= building.costWood;
 
-                buildings.buildingList.Add(gameObject);
-                isOccupied = true;
-                standardSprite = spriteRenderer.sprite;
-            }
+            //    buildings.buildingList.Add(gameObject);
+            //    isOccupied = true;
+            //    standardSprite = spriteRenderer.sprite;
+            //}
         }
         else
         { Debug.Log("Fick dich geh weg.....\nHier ist besetzt."); }
