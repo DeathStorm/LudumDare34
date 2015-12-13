@@ -3,13 +3,40 @@ using System.Collections;
 
 public class FloatingButtons : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+
+    //
+    // ----- Methods
+	void Start () 
+    {
 	
-	}
+	} // END Start
 	
-	// Update is called once per frame
-	void Update () {
+    void Update () 
+    {
 	
-	}
-}
+	} // END Update
+
+
+    void OnMouseDown()
+    {
+
+        if (this.name == "ButtonStart")
+        {
+
+            Application.LoadLevel(1);
+        }
+        else if (this.name == "ButtonExit")
+        {
+            Application.Quit();
+        }
+        else
+        {
+            Debug.Log("Mir fleucht als wäre hier ein Button Name nicht korrekt.");
+        }
+
+    
+    } // END OnMouseDown
+
+
+
+} // END Class
