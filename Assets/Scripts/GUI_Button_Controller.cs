@@ -13,6 +13,12 @@ public class GUI_Button_Controller: MonoBehaviour {
     public ASSIGNMENTS changeAssigned = ASSIGNMENTS.NONE;
     public int changeAssignedAmount = 0;
 
+    private Round_Manager roundManager;
+
+    void Start()
+    {
+        roundManager = GameObject.Find("Game_Properties").GetComponent<Round_Manager>();
+    }
 
     public void Click_ChooseBuildingToBuild()
     {
@@ -21,8 +27,8 @@ public class GUI_Button_Controller: MonoBehaviour {
 
 
     public void Click_ChangeAssignedHumans()
-    { 
-
+    {
+        roundManager.ChangeAssignement(changeAssigned, changeAssignedAmount);
     }
 
 

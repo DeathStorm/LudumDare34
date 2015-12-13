@@ -14,7 +14,9 @@ public class Tile : MonoBehaviour
     public Sprite standardSprite;
 
     public bool isOccupied = false;
+    public int roundsToBuild = 0;
 
+    public Building_Progress buildingProgress;
 
     // Use this for initialization
     void Start()
@@ -23,6 +25,9 @@ public class Tile : MonoBehaviour
         standardSprite = spriteRenderer.sprite;
 
         gameProperties = GameObject.Find("Game_Properties");
+
+        buildingProgress = gameObject.GetComponentInChildren<Building_Progress>();
+
         buildings = gameProperties.GetComponent<Buildings>();
         player = gameProperties.GetComponent<Player>();
 
@@ -33,6 +38,22 @@ public class Tile : MonoBehaviour
     {
 
     }
+
+    public void RefreshBuildStatus()
+    {
+        SpriteRenderer buildingSprite = null;
+        buildingSprite = buildingProgress.gameObject.GetComponent<SpriteRenderer>();
+
+        if (roundsToBuild > 0  && roundsToBuild <= 6)
+        {
+            buildingSprite.sprite = buildingProgress.buildingSprites[roundsToBuild - 1];
+        }
+        else if (roundsToBuild > 0)
+        {
+            buildingSprite.sprite = buildingProgress.buildingSprites[5];
+        }
+    }
+
 
     void OnMouseEnter()
     {
@@ -51,6 +72,7 @@ public class Tile : MonoBehaviour
         {
 
             buildings.BuildBuilding(gameObject);
+
             //BUILDING building = buildings.listOfAllBuildings[buildings.choosenBuildingToBuild];
 
             //if (

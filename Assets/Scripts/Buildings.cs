@@ -88,6 +88,8 @@ public class Buildings : MonoBehaviour
             buildingList.Add(tileObject);
             tile.isOccupied = true;
             tile.standardSprite = tile.spriteRenderer.sprite;
+            tile.roundsToBuild = building.roundsToBeBuild;
+            tile.RefreshBuildStatus();
 
             guiController.UpdateGUIRessources();
         
