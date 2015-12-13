@@ -7850,3 +7850,9 @@ neuer Score7015
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.358656 ms
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 210.
+Total: 0.481880 ms (FindLiveObjects: 0.077490 ms CreateObjectMapping: 0.014882 ms MarkObjects: 0.360768 ms  DeleteObjects: 0.027198 ms)
+
