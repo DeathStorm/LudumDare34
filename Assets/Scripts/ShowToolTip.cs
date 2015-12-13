@@ -5,9 +5,10 @@ using BUILDING = Buildings.BUILDING;
 using BUILDINGS = Buildings.BUILDINGS;
 using TEXTMODE = ToolTip.TEXTMODE;
 
-public class ShowToolTip : MonoBehaviour {
-    
-    public enum TOOLTIPMODE {ShowNothing, ShowNameAndCost, ShowText}
+public class ShowToolTip : MonoBehaviour
+{
+
+    public enum TOOLTIPMODE { ShowNothing, ShowNameAndCost, ShowText }
 
     public TOOLTIPMODE toolTipMode = TOOLTIPMODE.ShowNothing;
     public BUILDINGS buildingType = BUILDINGS.NONE;
@@ -22,12 +23,12 @@ public class ShowToolTip : MonoBehaviour {
     public ToolTip toolTip;
     public Buildings buildings;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start()
     {
         buildings = GameObject.Find("Game_Properties").GetComponent<Buildings>();
         toolTip = GameObject.Find("ToolTip").GetComponent<ToolTip>();
-	}
+    }
 
     public void OnMouseExit()
     {
@@ -43,13 +44,14 @@ public class ShowToolTip : MonoBehaviour {
             toolTip.toolTip2.text = textField2;
             toolTip.toolTipMerged.text = textFieldMerged;
 
-            foreach (GameObject buildingObject in buildings.buildingList)
-            {
-
-            }
-
-            toolTip.toolTipMerged.text += 
-
+            //if (addBuildingList)
+            //{
+            //    foreach (GameObject buildingObject in buildings.buildingList)
+            //    {
+            //        Tile tile = buildingObject.GetComponent<Tile>();
+            //        toolTip.toolTipMerged.text += buildings.listOfAllBuildings[tile.buildingType].name + " [" + tile.roundsToBuild.ToString() + "]";
+            //    }
+            //}
             toolTip.showToolTip = true;
 
 
@@ -61,12 +63,12 @@ public class ShowToolTip : MonoBehaviour {
             BUILDING building = buildings.listOfAllBuildings[buildingType];
 
 
-            toolTip.toolTip1.text = building.name+"\n";
-            toolTip.toolTip1.text += "Food: "+ building.costFood.ToString()+ "\n";
-            toolTip.toolTip1.text += "Wood: "+ building.costWood.ToString()+ "\n";
-            toolTip.toolTip1.text += "Ore: "+ building.costOre.ToString()+ "\n";
+            toolTip.toolTip1.text = building.name + "\n";
+            toolTip.toolTip1.text += "Food: " + building.costFood.ToString() + "\n";
+            toolTip.toolTip1.text += "Wood: " + building.costWood.ToString() + "\n";
+            toolTip.toolTip1.text += "Ore: " + building.costOre.ToString() + "\n";
 
-            toolTip.toolTip2.text =  "\n";
+            toolTip.toolTip2.text = "\n";
             toolTip.toolTip2.text += "Water: " + building.costWater.ToString() + "\n";
             toolTip.toolTip2.text += "Stone: " + building.costStone.ToString() + "\n";
             toolTip.toolTip2.text += "\n";
@@ -76,9 +78,9 @@ public class ShowToolTip : MonoBehaviour {
 
     }
 
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update()
     {
-	
-	}
+
+    }
 }

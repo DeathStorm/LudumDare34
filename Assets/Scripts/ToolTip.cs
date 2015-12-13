@@ -21,6 +21,8 @@ public class ToolTip : MonoBehaviour
     public GameObject toolTipObjectMerged;
     public Text toolTipMerged;
 
+    public Toggle toggleToolTip;
+
     // Use this for initialization
     void Start()
     {
@@ -30,6 +32,8 @@ public class ToolTip : MonoBehaviour
         toolTip2 = toolTipObject2.GetComponent<Text>();
 
         toolTipMerged = toolTipObjectMerged.GetComponent<Text>();
+
+        toggleToolTip = GameObject.Find("Toggle_ToolTip").GetComponent<Toggle>();
     }
 
     // Update is called once per frame
@@ -64,14 +68,14 @@ public class ToolTip : MonoBehaviour
         //    toolTipObject2.SetActive(true);
         //}
 
-        if ( showToolTip == false && curImage.enabled == true)
+        if ( (showToolTip == false || toggleToolTip.isOn == false) && curImage.enabled == true)
         {
             curImage.enabled = false;
             toolTipObjectMerged.SetActive(false);
             toolTipObject1.SetActive(false);
             toolTipObject2.SetActive(false);
         }
-        else if (showToolTip == true && curImage.enabled == false)
+        else if (toggleToolTip.isOn == true && showToolTip == true && curImage.enabled == false)
         {
             curImage.enabled = true;
             if (textmode == TEXTMODE.TwoColumns)
@@ -89,7 +93,8 @@ public class ToolTip : MonoBehaviour
         //Debug.Log(Input.mousePosition);
 
         gameObject.transform.position = Input.mousePosition;
-        gameObject.transform.position += new Vector3(0, -20, 0);
+        //gameObject.transform.position += new Vector3(0, -20, 0);
+        gameObject.transform.position += new Vector3(-20, 0, 0);
 
     }
 }
