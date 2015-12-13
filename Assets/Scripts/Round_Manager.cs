@@ -126,11 +126,11 @@ public class Round_Manager : MonoBehaviour
     {
         ReCalculateLimits();
 
-        player.food = Mathf.Clamp(player.food + (farmCur * 2), 0, storageCur);
-        player.water = Mathf.Clamp(player.water + (wellCur * 2), 0, storageCur); ;
-        player.ore = Mathf.Clamp(player.ore + mineCur, 0, storageCur); ;
-        player.wood = Mathf.Clamp(player.wood + woodcutterCur, 0, storageCur); ;
-        player.stone = Mathf.Clamp(player.stone + quarryCur, 0, storageCur); ;
+        player.food = Mathf.Clamp(player.food + (farmCur * 3), 0, storageCur);
+        player.water = Mathf.Clamp(player.water + (wellCur * 3), 0, storageCur); ;
+        player.ore = Mathf.Clamp(player.ore + (mineCur * 2), 0, storageCur); ;
+        player.wood = Mathf.Clamp(player.wood + (woodcutterCur*2), 0, storageCur); ;
+        player.stone = Mathf.Clamp(player.stone + (quarryCur * 2), 0, storageCur); ;
 
         player.humans = Mathf.Clamp(player.humans + (int)(houseCur / 2), 0, humanMax);
 

@@ -109,8 +109,8 @@ public class Buildings : MonoBehaviour
         building = new BUILDING();
         building.name = "Farm House";
         building.sprite = spriteFarm;
-        building.roundsToBeBuild = 4;
-        building.costFood = 4;
+        building.roundsToBeBuild = 3;
+        building.costFood = 3;
         building.costWater = 1;
         building.costWood = 4;
         building.costStone = 2;
@@ -121,7 +121,7 @@ public class Buildings : MonoBehaviour
         building = new BUILDING();
         building.name = "Well";
         building.sprite = spriteWell;
-        building.roundsToBeBuild = 2;
+        building.roundsToBeBuild = 1;
         building.costFood = 0;
         building.costWater = 0;
         building.costWood = 2;
@@ -134,7 +134,7 @@ public class Buildings : MonoBehaviour
         building.sprite = spriteWoodcutter;
         building.roundsToBeBuild = 2;
         building.costFood = 2;
-        building.costWater = 2;
+        building.costWater = 1;
         building.costWood = 6;
         building.costStone = 0;
         building.costOre = 2;
@@ -143,9 +143,9 @@ public class Buildings : MonoBehaviour
         building = new BUILDING();
         building.name = "House";
         building.sprite = spriteHouse;
-        building.roundsToBeBuild = 4;
-        building.costFood = 4;
-        building.costWater = 4;
+        building.roundsToBeBuild = 5;
+        building.costFood = 3;
+        building.costWater = 3;
         building.costWood = 4;
         building.costStone = 2;
         building.costOre = 0;
@@ -177,8 +177,8 @@ public class Buildings : MonoBehaviour
         building.name = "Warehouse";
         building.sprite = spriteWarehouse;
         building.roundsToBeBuild = 6;
-        building.costFood = 0;
-        building.costWater = 0;
+        building.costFood = 3;
+        building.costWater = 4;
         building.costWood = 10;
         building.costStone = 2;
         building.costOre = 0;
