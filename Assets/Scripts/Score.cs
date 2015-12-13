@@ -22,26 +22,26 @@ public class Score : MonoBehaviour {
     public Text highscoreText;
     public Text newHighscore;
     public int gameRoundsToEnd = 100;
-    public int multiFarm = 2;
-    public int multiWell = 2;
-    public int multiHouse = 2;
-    public int multiLumberjack = 2;
-    public int multiQuarry = 2;
-    public int multiMine = 2;
-    public int multiStorage = 2;
+    public int multiFarm = 30;
+    public int multiWell = 30;
+    public int multiHouse = 40;
+    public int multiLumberjack = 40;
+    public int multiQuarry = 60;
+    public int multiMine = 50;
+    public int multiStorage = 70;
 
-    public int multiHuman = 2;
-    public int multiFood = 2;
-    public int multiWater = 2;
-    public int multiWood = 2;
-    public int multiStone = 2;
-    public int multiOre = 2;
+    public int multiHuman = 100;
+    public int multiFood = 25;
+    public int multiWater = 25;
+    public int multiWood = 60;
+    public int multiStone = 30;
+    public int multiOre = 40;
 
-
+    private ToolTip toolTip;
 
     //
     // --- Private Variables
-    float actScore = 0f;
+    int actScore = 0;
     bool scoreShowd = false;
     
     
@@ -52,6 +52,7 @@ public class Score : MonoBehaviour {
         rManager = this.GetComponent<Round_Manager>();
         pManager = this.GetComponent<Player>();
         build = this.GetComponent<Buildings>();
+        toolTip = GameObject.Find("ToolTip").GetComponent<ToolTip>();
 	} // END Start
 
 
@@ -67,6 +68,7 @@ public class Score : MonoBehaviour {
 
         if (rManager.currentRound > gameRoundsToEnd)
         {
+            toolTip.showToolTip = false;
 
             if (scoreShowd == false)
             {
@@ -92,6 +94,7 @@ public class Score : MonoBehaviour {
         }
         else if (rManager.currentRound < gameRoundsToEnd && pManager.humans < 1)
         {
+            toolTip.showToolTip = false;
             if (scoreShowd == false)
             {
 
@@ -160,15 +163,16 @@ public class Score : MonoBehaviour {
     void MaybeHighscore()
     {
 
-        float savedHighscore = PlayerPrefs.GetFloat("Highscore", 0f);
-
+        int savedHighscore = PlayerPrefs.GetInt("Highscore", 0); // .GetFloat("Highscore", 0f);
+        
         Debug.Log("alter Score" + savedHighscore);
         Debug.Log("neuer Score" + actScore);
         
 
         if (actScore > savedHighscore)
         {
-            PlayerPrefs.SetFloat("Highscore", actScore);
+            //PlayerPrefs.SetFloat("Highscore", actScore);
+            PlayerPrefs.SetInt("Highscore", actScore);
             newHighscore.enabled = true;
         }
         else

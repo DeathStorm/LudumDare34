@@ -1,0 +1,126 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 Series (ID=0x6798)
+    Vendor:   ATI
+    VRAM:     3054 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.182 seconds
+desktop: 2560x1440 60Hz; virtual: 4240x1440 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: G:\TwoDoomedPenguins\LudumDare34\bin\Colonize\Colonize_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 5470 -> priority: 1 
+  Thread -> id: 964 -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.445009 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1774.
+Total: 3.157369 ms (FindLiveObjects: 0.237861 ms CreateObjectMapping: 0.050548 ms MarkObjects: 2.807377 ms  DeleteObjects: 0.017191 ms)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+alter Score2550
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+neuer Score2550
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Kein neuer Highscore
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.641480 ms
+
+Unloading 34 unused Assets to reduce memory usage. Loaded Objects now: 208.
+Total: 0.486755 ms (FindLiveObjects: 0.062865 ms CreateObjectMapping: 0.014625 ms MarkObjects: 0.374881 ms  DeleteObjects: 0.033100 ms)
+

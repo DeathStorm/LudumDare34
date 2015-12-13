@@ -74,19 +74,19 @@ public class Buildings : MonoBehaviour
 
         if (
             player.wood >= building.costWood &&
-            player.food >= building.costWood &&
-            player.water >= building.costWood &&
-            player.ore >= building.costWood &&
-            player.stone >= building.costWood
+            player.food >= building.costFood &&
+            player.water >= building.costWater &&
+            player.ore >= building.costOre &&
+            player.stone >= building.costStone
             )
         {
             tile.isOccupied = true;
 
             player.wood -= building.costWood;
-            player.food -= building.costWood;
-            player.water -= building.costWood;
-            player.ore -= building.costWood;
-            player.stone -= building.costWood;
+            player.food -= building.costFood;
+            player.water -= building.costWater;
+            player.ore -= building.costOre;
+            player.stone -= building.costStone;
 
             buildingList.Add(tileObject);
             
