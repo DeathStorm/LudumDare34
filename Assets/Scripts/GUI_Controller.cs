@@ -54,7 +54,11 @@ public class GUI_Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (!isInitialLoaded) UpdateGUIRessources();
+        if (!isInitialLoaded)
+        {
+            UpdateGUIRessources();
+            isInitialLoaded = true;
+        }
 
         if (Input.GetMouseButton(1))
         {
@@ -99,7 +103,6 @@ public class GUI_Controller : MonoBehaviour {
 
         textAssignBuildingCur.text = roundManager.buildingCur.ToString();
         textAssignBuildingMax.text = roundManager.buildingMax.ToString();
-
 
     }
 

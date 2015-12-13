@@ -2,6 +2,7 @@
 using System.Collections;
 
 using BUILDING = Buildings.BUILDING;
+using BUILDINGS = Buildings.BUILDINGS;
 
 public class Tile : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class Tile : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite standardSprite;
+    public Sprite borderSprite;
 
+    public BUILDINGS buildingType = BUILDINGS.NONE;
     public bool isOccupied = false;
     public int roundsToBuild = 0;
 
@@ -36,7 +39,10 @@ public class Tile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (isOccupied && spriteRenderer.sprite == borderSprite)
+        //{ 
 
+        //}
     }
 
     public void RefreshBuildStatus()
@@ -50,7 +56,11 @@ public class Tile : MonoBehaviour
         }
         else if (roundsToBuild > 0)
         {
-            buildingSprite.sprite = buildingProgress.buildingSprites[5];
+            buildingSprite.sprite = buildingProgress.buildingSprites[6];
+        }
+        else
+        {
+            buildingSprite.sprite = null;
         }
     }
 

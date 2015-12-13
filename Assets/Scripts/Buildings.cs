@@ -36,6 +36,7 @@ public class Buildings : MonoBehaviour
 
     public Dictionary<BUILDINGS, BUILDING> listOfAllBuildings = new Dictionary<BUILDINGS, BUILDING>();
     public List<GameObject> buildingList = new List<GameObject>();
+    public List<GameObject> buildingsWhichAreBuilt = new List<GameObject>();
 
     private Player player;
     private GUI_Controller guiController;
@@ -79,6 +80,8 @@ public class Buildings : MonoBehaviour
             player.stone >= building.costWood
             )
         {
+            tile.isOccupied = true;
+
             player.wood -= building.costWood;
             player.food -= building.costWood;
             player.water -= building.costWood;
@@ -86,8 +89,11 @@ public class Buildings : MonoBehaviour
             player.stone -= building.costWood;
 
             buildingList.Add(tileObject);
-            tile.isOccupied = true;
-            tile.standardSprite = tile.spriteRenderer.sprite;
+            
+            tile.buildingType = choosenBuildingToBuild;
+            //tile.standardSprite = tile.spriteRenderer.sprite;
+            tile.standardSprite = choosenBuildingSprite;
+            tile.spriteRenderer.sprite = tile.standardSprite;
             tile.roundsToBuild = building.roundsToBeBuild;
             tile.RefreshBuildStatus();
 

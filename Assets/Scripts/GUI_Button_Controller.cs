@@ -32,4 +32,9 @@ public class GUI_Button_Controller: MonoBehaviour {
     }
 
 
+    public void Click_EndRound()
+    {
+        roundManager.EndRound();
+    }
+
 }

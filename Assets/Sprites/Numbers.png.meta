@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 47f59a30d5a9d7241bcc7bd478b4a0aa
-timeCreated: 1449962728
+timeCreated: 1450007107
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,7 @@ TextureImporter:
     21300006: Numbers_3
     21300008: Numbers_4
     21300010: Numbers_5
+    21300012: Numbers_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -60,7 +61,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -70,7 +71,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -80,7 +81,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -89,8 +90,8 @@ TextureImporter:
     - name: Numbers_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -99,8 +100,8 @@ TextureImporter:
     - name: Numbers_4
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -109,8 +110,18 @@ TextureImporter:
     - name: Numbers_5
       rect:
         serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Numbers_6
+      rect:
+        serializedVersion: 2
         x: 64
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0

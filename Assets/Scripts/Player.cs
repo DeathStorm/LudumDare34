@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public int ore = 0;
 
 
+
     // Use this for initialization
     void Start()
     {
