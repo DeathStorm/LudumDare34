@@ -101,7 +101,7 @@ public class Round_Manager : MonoBehaviour
                     mineMax += 2;
                     break;
                 case BUILDINGS.Warehouse:
-                    storageCur += 50;
+                    storageCur += 20;
                     break;
                 case BUILDINGS.Woodcutter:
                     woodcutterMax += 2;
