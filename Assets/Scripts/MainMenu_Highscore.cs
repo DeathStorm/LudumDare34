@@ -19,7 +19,7 @@ public class MainMenu_Highscore : MonoBehaviour {
     {
 
         
-        highscore = PlayerPrefs.GetFloat("Highscore", 0f);
+        highscore = PlayerPrefs.GetInt("Highscore", 0);
         SetHighscoreBeShowend();
 
 	} // END Start

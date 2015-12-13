@@ -37,4 +37,9 @@ public class GUI_Button_Controller: MonoBehaviour {
         roundManager.EndRound();
     }
 
+    public void Click_BackToMainMenu()
+    {
+        Application.LoadLevel(0);
+    }
+
 }
