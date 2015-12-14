@@ -105,7 +105,7 @@ public class Tile : MonoBehaviour
             //}
         }
         else
-        { Debug.Log("Fick dich geh weg.....\nHier ist besetzt."); }
+        { Debug.Log("Hier ist besetzt."); }
 
     }
 

@@ -13,6 +13,8 @@ public class GUI_Button_Controller: MonoBehaviour {
     public ASSIGNMENTS changeAssigned = ASSIGNMENTS.NONE;
     public int changeAssignedAmount = 0;
 
+    public GameObject EventPanel;
+
     private Round_Manager roundManager;
 
     void Start()
@@ -40,6 +42,11 @@ public class GUI_Button_Controller: MonoBehaviour {
     public void Click_BackToMainMenu()
     {
         Application.LoadLevel(0);
+    }
+
+    public void Click_CloseEvent()
+    {
+        EventPanel.SetActive(false);
     }
 
 }

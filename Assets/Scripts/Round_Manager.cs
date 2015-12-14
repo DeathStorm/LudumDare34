@@ -44,6 +44,7 @@ public class Round_Manager : MonoBehaviour
     private GUI_Controller guiController;
     private Player player;
     private Buildings buildings;
+    private EventScript eventScript;
 
     private bool cautionFood = false;
     private bool cautionWater = false;
@@ -53,12 +54,15 @@ public class Round_Manager : MonoBehaviour
 
     private bool initReCalculate = false;
 
+    public int eventsStartAtRound = 10;
+    
     // Use this for initialization
     void Start()
     {
         guiController = gameObject.GetComponent<GUI_Controller>();
         player = gameObject.GetComponent<Player>();
         buildings = gameObject.GetComponent<Buildings>();
+        eventScript = gameObject.GetComponent<EventScript>();
     }
 
     // Update is called once per frame
@@ -97,7 +101,7 @@ public class Round_Manager : MonoBehaviour
                 case BUILDINGS.Well:
                     wellMax += 2;
                     break;
-                case BUILDINGS.Mine:
+                case BUILDINGS.Mine:    
                     mineMax += 2;
                     break;
                 case BUILDINGS.Warehouse:
@@ -124,13 +128,15 @@ public class Round_Manager : MonoBehaviour
 
     public void EndRound()
     {
+        buildings.ChooseBuildingToBuild();
+
         ReCalculateLimits();
 
         player.food = Mathf.Clamp(player.food + (farmCur * 3), 0, storageCur);
-        player.water = Mathf.Clamp(player.water + (wellCur * 3), 0, storageCur); ;
-        player.ore = Mathf.Clamp(player.ore + (mineCur * 2), 0, storageCur); ;
-        player.wood = Mathf.Clamp(player.wood + (woodcutterCur*2), 0, storageCur); ;
-        player.stone = Mathf.Clamp(player.stone + (quarryCur * 2), 0, storageCur); ;
+        player.water = Mathf.Clamp(player.water + (wellCur * 3), 0, storageCur);
+        player.ore = Mathf.Clamp(player.ore + (mineCur * 2), 0, storageCur);
+        player.wood = Mathf.Clamp(player.wood + (woodcutterCur*2), 0, storageCur);
+        player.stone = Mathf.Clamp(player.stone + (quarryCur * 2), 0, storageCur);
 
         player.humans = Mathf.Clamp(player.humans + (int)(houseCur / 2), 0, humanMax);
 
@@ -202,6 +208,8 @@ public class Round_Manager : MonoBehaviour
 
         guiController.UpdateGUIAssignements();
         guiController.UpdateGUIRessources();
+
+        if (currentRound >= eventsStartAtRound) eventScript.GenerateEvent();
     }
 
     private void RemoveAWorkerBecauseOfDying()
